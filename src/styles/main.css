@@ -22,31 +22,6 @@ p {
     grid-gap: 10px;
 }
 
-@media screen and (min-width: 600px) {
-    .sidebar {
-        float: left;
-        width: 20%;
-    }
-
-    .content {
-        float: right;
-        width: 80%;
-    }
-
-    .wrapper {
-        margin: 0 auto;
-        grid-template-columns: 1fr 3fr;
-    }
-
-    .header,
-    .footer {
-        grid-column: 1 / -1;
-        /* needed for the floated layout */
-        clear: both;
-    }
-
-}
-
 .wrapper>* {
     padding: 1em;
     font-size: 150%;
@@ -68,7 +43,6 @@ html {
 }
 
 /* Cool link hover effects. */
-/* TODO: different hover for icons? */
 a {
     position: relative;
     text-decoration: none;
@@ -112,7 +86,8 @@ a.text-black::after {
 }
 
 .sidebar {
-    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-right: 0;
     text-align: end;
 }
 
@@ -121,6 +96,10 @@ a.text-black::after {
     font-size: 1.25em;
     font-weight: bold;
     margin: 0.5em 1em;
+}
+
+.sidebar .sidebar-link {
+    float: left;
 }
 
 .footer {
@@ -135,4 +114,45 @@ a.text-black::after {
 
 header .title {
     font-size: 6rem;
+}
+
+.footer-links {
+    float: right;
+}
+
+.footer-links a {
+    margin: 0 0.1em;
+}
+
+/* Disable link hover effects for footer. */
+.footer-links a::after {
+    height: 0;
+}
+
+/* Desktop design. */
+@media screen and (min-width: 600px) {
+    .sidebar {
+        float: left;
+        width: 20%;
+        border-bottom: 0px;
+        border-right: 2px solid #ccc;
+    }
+
+    .content {
+        float: right;
+        width: 80%;
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .header,
+    .footer {
+        grid-column: 1 / -1;
+        /* needed for the floated layout */
+        clear: both;
+    }
+
 }
