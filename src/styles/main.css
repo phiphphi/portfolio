@@ -95,11 +95,11 @@ a.text-black::after {
     display: inline-block;
     font-size: 1.25em;
     font-weight: bold;
-    margin: 0.5em 1em;
+    margin: 0.5em;
 }
 
 .sidebar .sidebar-link {
-    float: left;
+    text-align: center;
 }
 
 .footer {
@@ -113,7 +113,7 @@ a.text-black::after {
 }
 
 header .title {
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
 .footer-links {
@@ -133,14 +133,17 @@ header .title {
 @media screen and (min-width: 600px) {
     .sidebar {
         float: left;
-        width: 20%;
         border-bottom: 0px;
         border-right: 2px solid #ccc;
     }
 
+
+    .sidebar .sidebar-link {
+        text-align: center;
+    }
+
     .content {
         float: right;
-        width: 80%;
     }
 
     .wrapper {
@@ -155,4 +158,8 @@ header .title {
         clear: both;
     }
 
+    /* Upsize title for desktop. */
+    header .title {
+        font-size: 6rem;
+    }
 }
