@@ -167,6 +167,11 @@ header .title {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Desktop design. */
 @media screen and (min-width: 600px) {
     .sidebar {
