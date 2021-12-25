@@ -111,14 +111,14 @@ footer {
     font-weight: bolder;
 }
 
-#home-link {
+#home {
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0;
     font-size: 4rem;
 }
 
-#home-link .title {
+#home .title {
     margin: 0;
 }
 
@@ -135,7 +135,7 @@ footer {
     height: 0;
 }
 
-/* Modal (background) */
+/* Cat API modal. */
 .modal {
     display: none;
     position: fixed;
@@ -177,6 +177,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* Home content. */
+#home-content {
+    font-size: 2em;
+}
+
 
 /* Desktop design. */
 @media screen and (min-width: 600px) {
