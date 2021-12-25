@@ -1,3 +1,9 @@
+/**
+ * Make a GET request to a url and pass along the recieved data.
+ * 
+ * @param {*} url The url to send a GET request to.
+ * @param {*} callback Method to pass the received data along to.
+ */
 function ajax_get(url, callback) {
     var xmlhttp = new XMLHttpRequest();
 
@@ -19,19 +25,11 @@ function ajax_get(url, callback) {
     xmlhttp.send();
 }
 
-
 // Get the modal.
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal.
-var btn = document.getElementById("catBtn");
-
-// Get the <span> element that closes the modal.
-var span = document.getElementsByClassName("close")[0];
-
-var header = document.getElementById("header");
-
-header.addEventListener('click', function () {
+// Open the modal and get a random cat image when the cat button is clicked.
+document.getElementById("catBtn").onclick = function () {
     modal.style.display = "block";
 
     // Update page with gorgeous cat pictures.
@@ -42,10 +40,10 @@ header.addEventListener('click', function () {
         var html = '<img src="' + data[0]["url"] + '">';
         document.getElementById("a3").innerHTML = html;
     });
-});
+}
 
-// When the user clicks on <span> (x), close the modal.
-span.onclick = function () {
+// Close the modal when its close button is clicked.
+document.getElementsByClassName("close")[0] = function () {
     modal.style.display = "none";
 }
 

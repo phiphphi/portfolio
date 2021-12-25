@@ -11,8 +11,7 @@ body {
     color: #444;
 }
 
-h1,
-p {
+h1, p {
     margin: 0 0 0.25em 0;
 }
 
@@ -22,10 +21,10 @@ p {
     grid-gap: 10px;
 }
 
-.wrapper>* {
+.wrapper > * {
     padding: 1em;
     font-size: 150%;
-    /* needed for the floated layout*/
+    /* Required for the floated layout. */
     margin-bottom: 10px;
 }
 
@@ -59,7 +58,7 @@ a::after {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 0.2em;
     bottom: 0;
     left: 0;
     background-color: black;
@@ -76,33 +75,33 @@ a.text-black::after {
     background-color: black;
 }
 
-.header {
+header {
     border-bottom: 4px solid #444;
 }
 
-.header a {
+header a {
     padding-bottom: 0.25em;
     margin-right: 0.5em;
 }
 
-.sidebar {
+#sidebar {
     border-bottom: 2px solid #ccc;
     border-right: 0;
     text-align: end;
 }
 
-.sidebar a {
+#sidebar a {
     display: inline-block;
     font-size: 1.25em;
     font-weight: bold;
     margin: 0.5em;
 }
 
-.sidebar .sidebar-link {
+#sidebar .sidebar-link {
     text-align: center;
 }
 
-.footer {
+footer {
     color: #888;
     border-top: 2px solid #ccc;
 }
@@ -112,20 +111,27 @@ a.text-black::after {
     font-weight: bolder;
 }
 
-header .title {
+#home-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0;
     font-size: 4rem;
 }
 
-.footer-links {
+#home-link .title {
+    margin: 0;
+}
+
+#footer-links {
     float: right;
 }
 
-.footer-links a {
+#footer-links a {
     margin: 0 0.1em;
 }
 
 /* Disable link hover effects for footer. */
-.footer-links a::after {
+#footer-links a::after {
     height: 0;
 }
 
@@ -174,18 +180,18 @@ img {
 
 /* Desktop design. */
 @media screen and (min-width: 600px) {
-    .sidebar {
+    #sidebar {
         float: left;
         border-bottom: 0px;
         border-right: 2px solid #ccc;
     }
 
 
-    .sidebar .sidebar-link {
+    #sidebar .sidebar-link {
         text-align: center;
     }
 
-    .content {
+    #content {
         float: right;
     }
 
@@ -194,8 +200,8 @@ img {
         grid-template-columns: 1fr 3fr;
     }
 
-    .header,
-    .footer {
+    header,
+    footer {
         grid-column: 1 / -1;
         /* needed for the floated layout */
         clear: both;
