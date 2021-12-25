@@ -34,16 +34,13 @@ document.getElementById("catBtn").onclick = function () {
 
     // Update page with gorgeous cat pictures.
     ajax_get('https://api.thecatapi.com/v1/images/search?size=full', function (data) {
-        document.getElementById("a1").innerHTML = data[0]["id"];
-        document.getElementById("a2").innerHTML = data[0]["url"];
-
         var html = '<img src="' + data[0]["url"] + '">';
-        document.getElementById("a3").innerHTML = html;
+        document.getElementById("cat-img").innerHTML = html;
     });
 }
 
 // Close the modal when its close button is clicked.
-document.getElementsByClassName("close")[0].onclick = function () {
+document.getElementsByClassName("modal-close")[0].onclick = function () {
     modal.style.display = "none";
 }
 

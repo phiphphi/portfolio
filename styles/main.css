@@ -86,8 +86,14 @@ header {
 }
 
 header a {
+    display: inline-block;
+    width: 40%;
     padding-bottom: 0.25em;
-    margin-right: 0.5em;
+    margin: 0 0.5em 0.5em 0;
+}
+
+#header-links {
+    margin-bottom: 0.5em;
 }
 
 #sidebar {
@@ -166,8 +172,9 @@ footer {
 }
 
 .modal-close {
-    color: #aaa;
-    float: right;
+    display: flex;
+    justify-content: end;
+    color: #444;
     font-size: 28px;
     font-weight: bold;
 }
@@ -177,6 +184,22 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#cat-img {
+    display: flex;
+    justify-content: center;
+    margin: 4em 2em;
+}
+
+#cat-img img {
+    border: 8px solid #444;
+}
+
+#cat-msg {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 img {
@@ -202,18 +225,19 @@ img {
     font-style: italic;
 }
 
+.content-link {
+    margin-bottom: 0.5em;
+}
+
 .content img {
     max-height: 600px;
     height: 70%;
     margin-bottom: 1em;
+    border: 8px solid #ccc;
 }
 
 .content a {
-    color: blue;
-}
-
-.content a::after {
-    height: 0;
+    padding-bottom: 4px;
 }
 
 #home-content {
@@ -257,6 +281,16 @@ img {
         grid-column: 1 / -1;
         /* needed for the floated layout */
         clear: both;
+    }
+
+    header a {
+        width: inherit;
+        padding-bottom: 0.25em;
+        margin: 0 0.5em 0 0;
+    }
+
+    #header-links {
+        margin-bottom: 0;
     }
 
     /* Upsize title for desktop. */
