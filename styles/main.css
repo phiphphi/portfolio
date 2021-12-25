@@ -220,6 +220,11 @@ img {
     font-size: 2em;
 }
 
+#resume {
+    min-height: 900px;
+    width: 100%;
+}
+
 
 /* Desktop design. */
 @media screen and (min-width: 600px) {
