@@ -28,6 +28,11 @@ h1, p {
     margin-bottom: 10px;
 }
 
+/* Remove extra padding on mobile layouts. */
+.wrapper header {
+    padding-bottom: 0;
+}
+
 /* We need to set the widths used on floated items back to auto, and remove the
    bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
@@ -111,15 +116,15 @@ footer {
     font-weight: bolder;
 }
 
-#home {
+#home-link {
+    font-size: 6rem;
     display: inline-block;
-    margin-bottom: 1rem;
-    padding: 0;
-    font-size: 4rem;
+    margin-bottom: 0.1em;
+    padding-bottom: 0em;
 }
 
-#home .title {
-    margin: 0;
+#home-link::after{
+    height: 0.1em;
 }
 
 #footer-links {
@@ -206,6 +211,10 @@ img {
         grid-template-columns: 1fr 3fr;
     }
 
+    .wrapper header {
+        padding-bottom: 1em;
+    }
+
     header,
     footer {
         grid-column: 1 / -1;
@@ -214,7 +223,11 @@ img {
     }
 
     /* Upsize title for desktop. */
-    header .title {
-        font-size: 6rem;
+    #home-link {
+        font-size: 8rem;
+    }
+
+    #home-content {
+        max-width: 75%;
     }
 }

@@ -43,7 +43,7 @@ document.getElementById("catBtn").onclick = function () {
 }
 
 // Close the modal when its close button is clicked.
-document.getElementsByClassName("close")[0] = function () {
+document.getElementsByClassName("close")[0].onclick = function () {
     modal.style.display = "none";
 }
 

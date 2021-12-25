@@ -18,3 +18,13 @@ function load(url, element) {
 load("../html/home.html", document.getElementById("main"));
 
 // TODO: add links to other content, along with event listeners
+
+document.addEventListener("click", loadContent);
+
+function loadContent(e) {
+    let elm = e.target;
+    if (elm.tagName === "A" && elm.id.slice(-4) === "link") {
+        let url = elm.id.slice(0, -5);
+        load(`../html/${url}.html`, document.getElementById("main"));
+    }
+}
