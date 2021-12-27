@@ -22,10 +22,21 @@ function loadContent(e) {
     if (elm.tagName === "A" && elm.id.slice(-4) === "link") {
         let url = elm.id.slice(0, -5);
         load(`../html/${url}.html`, document.getElementById("main"));
+        
+        // Set current page to return to on reload.
+        sessionStorage.setItem("currPage", url);
     }
 }
 
-// Initialize home page.
-load("../html/home.html", document.getElementById("main"));
+// Load last page we were on if it exists, otherwise load home page.
+function loadSavedPage() {
+    let page = sessionStorage.getItem("currPage");
+    if (page == null) {
+        page = "home";
+    }
 
-// Save page in sessionstorage for refresh
+    load(`../html/${page}.html`, document.getElementById("main"));
+}
+
+
+loadSavedPage();
