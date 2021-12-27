@@ -55,6 +55,7 @@ html {
 /* Cool link hover effects. */
 a {
     position: relative;
+    cursor: pointer;
     text-decoration: none;
     color: inherit;
 }
@@ -188,7 +189,6 @@ footer {
 .modal-close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
 #cat-img {
