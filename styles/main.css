@@ -236,8 +236,6 @@ img {
 }
 
 .content img {
-    max-height: 600px;
-    height: 70%;
     margin-bottom: 1em;
     border: 8px solid #ccc;
 }
