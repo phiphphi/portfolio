@@ -19,8 +19,8 @@ document.addEventListener("click", loadContent);
 // Load main page content on page link click.
 function loadContent(e) {
     let elm = e.target;
-    if (elm.tagName === "A" && elm.id.slice(-4) === "link") {
-        let url = elm.id.slice(0, -5);
+    if (elm.tagName === "A" && elm.id.slice(-9) === "page-link") {
+        let url = elm.id.slice(0, -10);
         load(`../html/${url}.html`, document.getElementById("main"));
         
         // Set current page to return to on reload.

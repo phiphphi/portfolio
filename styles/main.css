@@ -129,14 +129,14 @@ footer {
     font-weight: bolder;
 }
 
-#home-link {
+#home-page-link {
     font-size: 6rem;
     display: inline-block;
     margin-bottom: 0.1em;
     padding-bottom: 0em;
 }
 
-#home-link::after {
+#home-page-link::after {
     height: 0.1em;
 }
 
@@ -210,6 +210,7 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 /* Page content. */
@@ -247,11 +248,6 @@ img {
 
 #home-content {
     font-size: 2em;
-}
-
-#resume {
-    min-height: 900px;
-    width: 100%;
 }
 
 
@@ -299,7 +295,7 @@ img {
     }
 
     /* Upsize title for desktop. */
-    #home-link {
+    #home-page-link {
         font-size: 8rem;
     }
 
