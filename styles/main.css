@@ -235,7 +235,7 @@ img {
     margin-bottom: 0.5em;
 }
 
-.content img {
+.content img.img-border {
     margin-bottom: 1em;
     border: 8px solid #ccc;
 }
